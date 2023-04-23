@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+}
+.parent{
+    width: 500px;
+    height: 400px;
+    margin: 20px auto;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 240px);
+    grid-template-rows: auto;
+    gap: 15px;
+}
+.e,
+.l{
+    background-color: #eee;
+   
+}
+.e div,
+.l div{
+    background-color: gray;
+}
+.e{
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    grid-template-rows:repeat(7,50px);
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+.one{
+grid-area: 1 / 1 / 2 / span 4;
+
+}
+.e::after{
+    content: "";
+    width: 40px ;
+    height: 40px;
+    background-color: orange;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    animation-name: eee;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+}
+@keyframes eee{
+    0%{
+     left: 25px;
+     top: 30px;
+    }
+   10%{
+    left: 25px;
+    top: 180px;
+   }
+   20%{
+    left: 175px;
+    top: 180px;
+   }
+   30%{
+    right: 150px;
+    top: 180px;
+   }
+  40%{
+    left: 25px;
+    top: 180px;
+  }
+  50%{
+    left: 25px;
+    top: 330px;
+  }
+  60%{
+    left: 175px;
+    top: 330px;
+  }
+  70%{
+    right: 25px;
+    top: 330px;
+  }
+  80%{
+    left: 25px;
+    top: 330px;
+
+  }
+  90%{
+    left: 25px;
+    top: 30px;
+  }
+ 
+ 100%{
+    left: 175px;
+    top: 30px;
+
+ }
+  
+    
+  
+}
+    
+   
+
+.two{
+    grid-area: 2 / 1 / span 2 / span 1 ;
+  
+}
+.three{
+    grid-area: 4 / 1 / 5 / span 4;
+}
+.four{
+    grid-area: 5 / 1 / 7 / span 1;
+}
+.five{
+    grid-area: 7 / 1 / 8 / span 4;
+}
+.l{ 
+     display: grid;
+    grid-template-columns: repeat(4,50px);
+    grid-template-rows:repeat(7,50px);
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.first{
+    grid-area: 1 / 1 / span 7 / 2;
+}
+.second{
+    grid-area: 7 / 1 / 8 / span 4;
+
+}
+.l::after{
+    content: "";
+    width: 40px ;
+    height: 40px;
+    background-color: orange;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    animation-name: ooo;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+@keyframes ooo{
+    0%{
+        right: 25px;
+        bottom: 30px;
+    }
+
+10%{
+    right: 70px;
+    bottom: 30px;
+    opacity: 1;
+}
+20%{
+    right: 100px;
+    bottom: 30px;
+    opacity: 1;
+
+}
+30%{
+    right: 175px;
+    bottom: 30px;
+    opacity: 1;
+
+}
+40%{
+    right: 175px;
+    bottom: 70px;
+    opacity: 1;
+
+}
+50%{
+    right: 175px;
+    bottom: 110px;
+    opacity: 1;
+
+}
+60%{
+    right: 175px;
+    bottom: 150px;
+    opacity: 1;
+
+}
+70%{
+    right: 175px;
+    bottom: 200px;
+    opacity: 1;
+
+}
+80%{
+    right: 175px;
+    bottom: 330px;
+    opacity: 1;
+
+}
+
+100%{
+    right: 175px;
+    bottom: 330px;
+    opacity: 0;
+}
+}
